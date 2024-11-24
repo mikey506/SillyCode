@@ -1,7 +1,5 @@
 import pygame
 import random
-import math
-import string
 
 
 def create_triangle_grid(rows, cols, screen_width, screen_height):
@@ -84,6 +82,14 @@ def apply_symmetry(pattern, symmetry_type):
     return new_pattern
 
 
+def generate_ascii_grid(rows, cols):
+    """
+    Generate a grid of random DOS ASCII characters.
+    """
+    dos_ascii_chars = "█▒░╬║═▲▼■●♦♥☼≈≡×§¶¤"
+    return [[random.choice(dos_ascii_chars) for _ in range(cols)] for _ in range(rows)]
+
+
 def trinary_logic_update(pattern, perturbation_chance=0.01):
     """
     Update the pattern using trinary logic rules.
@@ -116,7 +122,7 @@ def trinary_logic_update(pattern, perturbation_chance=0.01):
 
 def draw_triangles(screen, triangles, pattern, rows, cols, color_offset, font, ascii_grid):
     """
-    Draw the pattern using a grid of triangles with ASCII characters.
+    Draw the pattern using a grid of triangles with DOS ASCII characters.
     """
     for i, triangle in enumerate(triangles):
         # Determine the row and column based on the triangle index
@@ -136,15 +142,7 @@ def draw_triangles(screen, triangles, pattern, rows, cols, color_offset, font, a
             text = font.render(ascii_char, True, (255, 255, 255))
             center_x = (triangle[0][0] + triangle[1][0] + triangle[2][0]) // 3
             center_y = (triangle[0][1] + triangle[1][1] + triangle[2][1]) // 3
-            screen.blit(text, (center_x - 5, center_y - 5))
-
-
-def generate_ascii_grid(rows, cols):
-    """
-    Generate a grid of random ASCII characters.
-    """
-    ascii_chars = string.ascii_letters + string.digits + "!@#$%^&*()-_=+[]{}|;:',.<>?/`~"
-    return [[random.choice(ascii_chars) for _ in range(cols)] for _ in range(rows)]
+            screen.blit(text, (center_x - 6, center_y - 6))
 
 
 def main():
@@ -153,9 +151,9 @@ def main():
     info = pygame.display.Info()
     screen_width, screen_height = info.current_w, info.current_h
     screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
-    pygame.display.set_caption("Symmetric Triangle Pixel Screensaver with ASCII")
+    pygame.display.set_caption("DOS ASCII Triangle Screensaver")
     clock = pygame.time.Clock()
-    font = pygame.font.SysFont("Courier", 12)
+    font = pygame.font.SysFont("Courier", 14)  # Courier for DOS-like font
 
     # Settings
     rows, cols = 40, 80  # Adjust density of triangles
