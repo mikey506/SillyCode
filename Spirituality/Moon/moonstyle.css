@@ -1,0 +1,47 @@
+/* moonstyle.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.moon-info {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.moon-info h1 {
+    text-align: center;
+    color: #333;
+}
+
+.moon-info h2 {
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.moon-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.moon-phases {
+    list-style: none;
+    padding: 0;
+}
+
+.moon-phases li {
+    margin: 15px 0;
+    padding: 10px;
+    background: #eef;
+    border-left: 4px solid #99c;
+    border-radius: 5px;
+}
