@@ -1,0 +1,7 @@
+Archetype,Subtype,Dopamine,Serotonin,Norepinephrine,Glutamate,GABA,Oxytocin,Vasopressin
+Witches,Bipolar Disorder,"(+ during mania, - during depression)",(-),"(+ during mania, - during depression)",(+),(-),(normal),(normal)
+Witches,Borderline Personality Disorder (BPD),(-),(-),(-),(normal),(-),(normal),(normal)
+Androids,High-Functioning Autism,(+/- depending on symptoms),"(+ in some, - in others)",(normal),(+),(-),(-),(-)
+Androids,ADHD / ADD,(-),(-),(-),(normal),(normal),(normal),(normal)
+Androids,OCD,(+),(-),(normal),(+),(-),(normal),(normal)
+Mystics,High-Functioning Schizophrenia,"(+ in some areas, - in others)",(-),(normal),(+),(-),(normal),(normal)
